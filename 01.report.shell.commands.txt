@@ -1,0 +1,80 @@
+$echo Hello World
+Hello World
+
+$ passwd
+Changing password for anluugia.
+(current) UNIX password: 
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+
+
+$date
+Tue, 09 Jan 2018 10:52:13 +07
+
+
+$ hostname
+anluugia-virtual-machine
+
+$ arch
+x86_64
+
+
+$ uname -a
+Linux anluugia-virtual-machine 4.10.0-28-generic
+ #32~16.04.2-Ubuntu SMP Thu Jul 20 10:19:48
+ UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
+
+$ dmesg
+[    0.000000] Linux version 4.10.0-28-generic (buildd@lgw01-12) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ) #32~16.04.2-Ubuntu SMP Thu Jul 20 10:19:48 UTC 2017 (Ubuntu 4.10.0-28.32~16.04.2-generic 4.10.17)
+[    0.000000] Command line: BOOT_IMAGE=/boot/vmlinuz-4.10.0-28-generic root=UUID=aad337a4-f4d0-454f-8baf-a132454987a5 ro quiet splash
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Centaur CentaurHauls
+[    0.000000] Disabled fast string operations
+
+$ uptime
+ 15:51:14 up 12 min,  1 user,  load average: 0,38, 0,69, 0,63
+
+$ who am i
+(This isn't a command line)
+
+$ whoami
+anluugia
+
+$ who
+anluugia tty7         2018-01-09 15:39 (:0)
+
+
+$ id
+uid=1000(anluugia) gid=1000(anluugia) groups=1000(anluugia),
+4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),113(lpadmin),128(sambashare)
+
+$ last
+anluugia tty7         :0               Tue Jan  9 15:39    gone - no logout
+reboot   system boot  4.10.0-28-generi Tue Jan  9 15:39   still running
+anluugia tty7         :0               Tue Jan  9 10:43 - down   (00:14)
+reboot   system boot  4.10.0-28-generi Tue Jan  9 10:42 - 10:58  (00:15)
+anluugia tty7         :0               Tue Jan  9 10:27 - down   (00:14)
+reboot   system boot  4.10.0-28-generi Tue Jan  9 10:27 - 10:42  (00:15)
+anluugia tty7         :0               Fri Jan  5 08:44 - crash (4+01:42)
+reboot   system boot  4.10.0-28-generi Fri Jan  5 08:43 - 10:42 (4+01:58)
+anluugia tty7         :0               Fri Jan  5 02:12 - down   (00:45)
+reboot   system boot  4.10.0-28-generi Fri Jan  5 02:12 - 02:58  (00:46)
+anluugia tty7         :0               Thu Jan  4 18:40 - crash  (07:32)
+reboot   system boot  4.10.0-28-generi Thu Jan  4 18:39 - 02:58  (08:18)
+
+wtmp begins Thu Jan  4 18:39:43 2018
+
+
+$ finger
+Login     Name       Tty      Idle  Login Time   Office     Office Phone
+anluugia  anluugia   tty7       23  Jan  9 15:39 (:0)
+(after sudo apt install finger)
+
+$ w
+ 16:07:34 up 28 min,  1 user,  load average: 0,80, 0,53, 0,50
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+anluugia tty7     :0               15:39   28:14  51.18s  0.48s /sbin/upstart -
+
