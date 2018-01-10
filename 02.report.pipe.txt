@@ -1,0 +1,21 @@
+1)
+ls | grep list
+(no output since there are not any files in my current folder that contains "list")
+2)
+$ cat /etc/passwd | wc
+     40      69    2249
+4)
+ cat /proc/cpuinfo | grep cores
+cpu cores	: 1
+cpu cores	: 1
+3)
+
+free | grep Mem | awk '{print $2}'
+2027092
+
+5)
+
+$ find /home/anluugia/Pictures -name '*.jpg' | wc -l
+
+2
+
