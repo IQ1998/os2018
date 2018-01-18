@@ -1,10 +1,7 @@
-~$ cat /proc/sched_debug | grep systemd
-         systemd     1       670.643567      2900   120         0.000000      3226.559764         0.000000 0 0 /autogroup-2
- systemd-journal   341       230.299937       859   120         0.000000       362.296755         0.000000 0 0 /autogroup-7
-   systemd-udevd   366      1579.982842      1251   120         0.000000      1317.369128         0.000000 0 0 /autogroup-11
- systemd-timesyn   474         5.913921        64   120         0.000000        26.305350         0.000000 0 0 /autogroup-29
-  systemd-logind   815        23.955534       319   120         0.000000        57.983577         0.000000 0 0 /autogroup-40
+cat /proc/sched_debug | grep "systemd " 
+         systemd     1       716.551652      3014   120         0.000000      3272.804700         0.000000 0 0 /autogroup-2
          systemd  1399        29.842113        24   120         0.000000        30.702006         0.000000 0 0 /autogroup-73
+
 
 anluugia@anluugia-virtual-machine:~$ cat /proc/1/sched
 systemd (1, #threads: 1)
