@@ -1,0 +1,40 @@
+~$ cat /proc/sched_debug | grep systemd
+         systemd     1       670.643567      2900   120         0.000000      3226.559764         0.000000 0 0 /autogroup-2
+ systemd-journal   341       230.299937       859   120         0.000000       362.296755         0.000000 0 0 /autogroup-7
+   systemd-udevd   366      1579.982842      1251   120         0.000000      1317.369128         0.000000 0 0 /autogroup-11
+ systemd-timesyn   474         5.913921        64   120         0.000000        26.305350         0.000000 0 0 /autogroup-29
+  systemd-logind   815        23.955534       319   120         0.000000        57.983577         0.000000 0 0 /autogroup-40
+         systemd  1399        29.842113        24   120         0.000000        30.702006         0.000000 0 0 /autogroup-73
+
+anluugia@anluugia-virtual-machine:~$ cat /proc/1/sched
+systemd (1, #threads: 1)
+-------------------------------------------------------------------
+se.exec_start                                :       1526659.220704
+se.vruntime                                  :           671.185055
+se.sum_exec_runtime                          :          3227.101252
+se.nr_migrations                             :                   53
+nr_switches                                  :                 2903
+nr_voluntary_switches                        :                 1508
+nr_involuntary_switches                      :                 1395
+se.load.weight                               :              1048576
+se.avg.load_sum                              :               427666
+se.avg.util_sum                              :               177152
+se.avg.load_avg                              :                    9
+se.avg.util_avg                              :                    3
+se.avg.last_update_time                      :        1526659220480
+policy                                       :                    0
+prio                                         :                  120
+clock-delta                                  :                  116
+mm->numa_scan_seq                            :                    0
+numa_pages_migrated                          :                    0
+numa_preferred_nid                           :                   -1
+total_numa_faults                            :                    0
+current_node=0, numa_group_id=0
+numa_faults node=0 task_private=0 task_shared=0 group_private=0 group_shared=0
+
+
+anluugia@anluugia-virtual-machine:~$ cat /proc/1/sched | grep switches
+nr_switches                                  :                 2920
+nr_voluntary_switches                        :                 1519
+nr_involuntary_switches                      :                 1401
+
