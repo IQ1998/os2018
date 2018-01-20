@@ -1,0 +1,14 @@
+~$ cat /proc/sched_debug | grep firefox
+         firefox  2454    162854.086484    280728   120         0.000000     74831.452582         0.000000 0 0 /autogroup-139
+         firefox  2513      6313.557554         1   120         0.000000         0.096975         0.000000 0 0 /autogroup-139
+
+
+1st way:
+~$ ps -o nlwp 2454
+NLWP
+  56
+
+2nd way:
+~$ ls /proc/2454/task | wc
+     56      56     280
+
